@@ -1,0 +1,23 @@
+# Exemples génériques — HA Voice Hub Community
+
+# Salon
+action: maison_alain_voice_hub.speak
+data:
+  zone: salon
+  profile: normal
+  message: "Ceci est un test du Voice Hub."
+
+# Toute la maison
+# action: maison_alain_voice_hub.speak
+# data:
+#   zone: toute_maison
+#   profile: important
+#   message: "Annonce générale de test."
+
+# Forcer un ou plusieurs lecteurs sans passer par une zone
+# action: maison_alain_voice_hub.speak
+# data:
+#   speakers:
+#     - media_player.exemple
+#   profile: discret
+#   message: "Test direct sur un lecteur."
