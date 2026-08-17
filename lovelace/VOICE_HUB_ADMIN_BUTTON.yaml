@@ -1,0 +1,38 @@
+type: custom:button-card
+name: ADMIN VOIX
+label: Zones · Enceintes · Règles · Profils · Test
+icon: mdi:account-voice
+show_label: true
+tap_action:
+  action: navigate
+  navigation_path: /maison-alain-voice-hub
+hold_action:
+  action: none
+styles:
+  card:
+    - min-height: 92px
+    - border-radius: 18px
+    - padding: 14px 16px
+    - background: radial-gradient(circle at 18% 0%, rgba(8,145,178,.24), rgba(2,6,23,.96) 58%)
+    - border: 1px solid rgba(56,189,248,.36)
+    - box-shadow: 0 12px 28px rgba(0,0,0,.24)
+  grid:
+    - grid-template-areas: '"i n" "i l"'
+    - grid-template-columns: 52px 1fr
+    - grid-template-rows: 1fr 1fr
+  icon:
+    - width: 34px
+    - color: '#67e8f9'
+  name:
+    - justify-self: start
+    - align-self: end
+    - font-size: 15px
+    - font-weight: 900
+    - letter-spacing: .08em
+    - color: '#e6faff'
+  label:
+    - justify-self: start
+    - align-self: start
+    - font-size: 10px
+    - font-weight: 700
+    - color: '#7dd3fc'
