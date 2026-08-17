@@ -1,0 +1,26 @@
+{
+  "title": "HA Voice Hub",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Installer HA Voice Hub",
+        "description": "Choisissez le moteur TTS et le lecteur de secours. Toute l'administration quotidienne se fera ensuite depuis le panneau Admin Voix, sans YAML.",
+        "data": {
+          "tts_entity": "Moteur TTS principal",
+          "default_speaker": "Lecteur de secours",
+          "prefix": "Préfixe vocal",
+          "voice": "Voix Google AI par défaut"
+        },
+        "data_description": {
+          "tts_entity": "Entité TTS utilisée par défaut pour toutes les annonces.",
+          "default_speaker": "Utilisé lorsqu'une zone vocale logique n'a encore aucune enceinte affectée.",
+          "prefix": "Texte optionnel prononcé avant les annonces.",
+          "voice": "Nom de voix Google Gemini TTS, par exemple zephyr ou achernar."
+        }
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "HA Voice Hub est déjà installé."
+    }
+  }
+}
