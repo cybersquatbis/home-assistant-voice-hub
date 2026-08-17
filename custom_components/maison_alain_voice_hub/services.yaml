@@ -1,0 +1,72 @@
+speak:
+  name: Parler
+  description: Diffuse une annonce via le serveur vocal central HA Voice Hub.
+  fields:
+    message:
+      name: Message
+      description: Texte ou template deja rendu a prononcer.
+      required: true
+      selector:
+        text:
+          multiline: true
+    zone:
+      name: Zone
+      description: Identifiant de zone Voice Hub. toute_maison diffuse sur toutes les enceintes affectees.
+      required: false
+      example: salon
+      selector:
+        text:
+    profile:
+      name: Profil
+      description: discret, normal, important ou critique.
+      required: false
+      default: normal
+      selector:
+        select:
+          options:
+            - discret
+            - normal
+            - important
+            - critique
+    speakers:
+      name: Enceintes forcees
+      description: Une ou plusieurs entites media_player. Si renseigne, ignore la zone.
+      required: false
+      selector:
+        entity:
+          multiple: true
+          filter:
+            - domain: media_player
+    volume:
+      name: Volume force
+      required: false
+      selector:
+        number:
+          min: 0
+          max: 1
+          step: 0.05
+          mode: slider
+    voice:
+      name: Voix TTS
+      description: Nom de voix du fournisseur, par exemple zephyr ou achernar pour Google Gemini TTS.
+      required: false
+      selector:
+        text:
+    tts_entity:
+      name: Moteur TTS force
+      description: Remplace ponctuellement le moteur TTS du profil et le moteur principal.
+      required: false
+      selector:
+        entity:
+          filter:
+            - domain: tts
+    use_prefix:
+      name: Utiliser le prefixe
+      required: false
+      default: true
+      selector:
+        boolean:
+
+reload:
+  name: Recharger
+  description: Recharge les regles et la configuration du Voice Hub depuis son stockage interne.
