@@ -1,0 +1,26 @@
+{
+  "title": "HA Voice Hub",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Install HA Voice Hub",
+        "description": "Choose the TTS engine and fallback player. Daily administration is then done from the Admin Voix panel without YAML.",
+        "data": {
+          "tts_entity": "Main TTS engine",
+          "default_speaker": "Fallback media player",
+          "prefix": "Voice prefix",
+          "voice": "Default Google AI voice"
+        },
+        "data_description": {
+          "tts_entity": "TTS entity used by default for all announcements.",
+          "default_speaker": "Used when a logical voice zone has no assigned speaker.",
+          "prefix": "Optional text spoken before announcements.",
+          "voice": "Google Gemini TTS voice name, for example zephyr or achernar."
+        }
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "HA Voice Hub is already installed."
+    }
+  }
+}
